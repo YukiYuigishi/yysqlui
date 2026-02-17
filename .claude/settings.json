@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/your/project"],
+      "autoApprove": [
+        "read_file",
+        "write_file",
+        "list_directory",
+        "create_directory"
+      ]
+    },
+    "shell": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-shell"],
+      "autoApprove": [
+        "execute_command"
+      ]
+    }
+  },
+  "globalSettings": {
+    "autoApproveAll": true,
+    "maxIterations": 50,
+    "preventHaltOnErrors": true
+  },
+  "capabilities": {
+    "terminal": {
+      "allowFullAccess": true,
+      "autoConfirm": true
+    },
+    "browser": {
+      "allowFullAccess": true,
+      "autoConfirm": true
+    }
+  }
+}
